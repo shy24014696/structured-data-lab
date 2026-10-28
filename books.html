@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An XML book catalogue fetched and parsed in the browser with DOMParser.">
+  <title>XML Book Catalogue · Structured Data Lab</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Structured Data Lab home">
+      <span class="brand-mark" aria-hidden="true">{&gt;}</span>
+      <span>structured<span class="brand-dot">.</span>data</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a class="active" href="books.html" aria-current="page">XML Lab</a>
+      <a href="profiles.html">JSON Lab</a>
+    </nav>
+  </header>
+
+  <main class="data-page">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow"><span></span> Lab 01 · XML</p>
+        <h1>The book <em>catalogue.</em></h1>
+        <p>Five books, one well-formed XML document. Fetched with the Fetch API and parsed into a live HTML view with DOMParser.</p>
+      </div>
+      <a class="source-link" href="book.xml"><span aria-hidden="true">&lt;/&gt;</span> View source data</a>
+    </section>
+
+    <section class="stats-grid" aria-label="Catalogue statistics">
+      <article><span class="stat-label">Total titles</span><strong id="book-count">—</strong><small>in the catalogue</small></article>
+      <article><span class="stat-label">Authors</span><strong id="author-count">—</strong><small>unique voices</small></article>
+      <article><span class="stat-label">Average price</span><strong id="average-price">—</strong><small>in US dollars</small></article>
+    </section>
+
+    <section class="data-panel" aria-labelledby="catalogue-title">
+      <div class="panel-header">
+        <div>
+          <span class="panel-kicker">COLLECTION / 001</span>
+          <h2 id="catalogue-title">Browse the shelves</h2>
+        </div>
+        <div class="data-status"><span></span> Live from book.xml</div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-field">
+          <span class="sr-only">Search by title, author, or book ID</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="book-search" type="search" placeholder="Search title, author, or ID…" autocomplete="off">
+        </label>
+        <label class="sort-field">
+          <span>Sort by</span>
+          <select id="book-sort">
+            <option value="id">Book ID</option>
+            <option value="title">Title A–Z</option>
+            <option value="author">Author A–Z</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="books-loading" class="loading-state" role="status">
+        <span class="loader" aria-hidden="true"></span>
+        <p>Fetching and parsing the catalogue…</p>
+      </div>
+
+      <div id="books-error" class="error-state" role="alert" hidden>
+        <strong>We couldn't load the catalogue.</strong>
+        <p id="books-error-message"></p>
+        <button id="books-retry" class="button button-primary" type="button">Try again</button>
+      </div>
+
+      <div id="books-content" hidden>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Books loaded from book.xml</caption>
+            <thead><tr><th scope="col">Book ID</th><th scope="col">Title</th><th scope="col">Author</th><th scope="col">Price</th></tr></thead>
+            <tbody id="book-table-body"></tbody>
+          </table>
+        </div>
+        <div class="panel-footer"><span id="book-results"></span><span>USD · XML 1.0</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Lab 01 <span>·</span> XML + Fetch API + DOMParser</p>
+    <a href="profiles.html">Next: JSON user profiles <span aria-hidden="true">→</span></a>
+  </footer>
+  <script src="books.js"></script>
+</body>
+</html>

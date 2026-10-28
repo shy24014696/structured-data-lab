@@ -1,0 +1,8 @@
+.playwright-cli/
+.workbuddy/
+*.genie
+lab_instructions_extracted.md
+lab_instructions_images/
+*-preview.png
+Thumbs.db
+Desktop.ini

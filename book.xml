@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+  <book id="B001">
+    <title>The Midnight Library</title>
+    <author>Matt Haig</author>
+    <price currency="USD">16.99</price>
+  </book>
+  <book id="B002">
+    <title>Klara and the Sun</title>
+    <author>Kazuo Ishiguro</author>
+    <price currency="USD">18.50</price>
+  </book>
+  <book id="B003">
+    <title>The Song of Achilles</title>
+    <author>Madeline Miller</author>
+    <price currency="USD">14.75</price>
+  </book>
+  <book id="B004">
+    <title>Project Hail Mary</title>
+    <author>Andy Weir</author>
+    <price currency="USD">20.00</price>
+  </book>
+  <book id="B005">
+    <title>The Name of the Wind</title>
+    <author>Patrick Rothfuss</author>
+    <price currency="USD">12.99</price>
+  </book>
+</catalogue>

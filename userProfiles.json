@@ -1,0 +1,74 @@
+[
+  {
+    "firstName": "Ava",
+    "lastName": "Chen",
+    "email": "ava.chen@example.com",
+    "dateOfBirth": "1994-03-18",
+    "preferences": {
+      "theme": "dark",
+      "language": "en-US",
+      "notifications": true,
+      "subscription": true
+    },
+    "address": {
+      "street": "1250 Market Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    }
+  },
+  {
+    "firstName": "Noah",
+    "lastName": "Williams",
+    "email": "noah.williams@example.com",
+    "dateOfBirth": "1988-11-02",
+    "preferences": {
+      "theme": "light",
+      "language": "en-GB",
+      "notifications": false,
+      "subscription": false
+    },
+    "address": {
+      "street": "42 Queen Street",
+      "city": "Auckland",
+      "state": "AUK",
+      "zipCode": "1010"
+    }
+  },
+  {
+    "firstName": "Sofia",
+    "lastName": "Rodriguez",
+    "email": "sofia.rodriguez@example.com",
+    "dateOfBirth": "1997-07-25",
+    "preferences": {
+      "theme": "dark",
+      "language": "es-ES",
+      "notifications": true,
+      "subscription": false
+    },
+    "address": {
+      "street": "18 Calle de Alcala",
+      "city": "Madrid",
+      "state": "MD",
+      "zipCode": "28014"
+    }
+  },
+  {
+    "firstName": "Ethan",
+    "lastName": "Brown",
+    "email": "ethan.brown@example.com",
+    "dateOfBirth": "1991-01-09",
+    "preferences": {
+      "theme": "light",
+      "language": "en-CA",
+      "notifications": true,
+      "subscription": true
+    },
+    "address": {
+      "street": "77 King Street West",
+      "city": "Toronto",
+      "state": "ON",
+      "zipCode": "M5K 1A1"
+    }
+  }
+]
